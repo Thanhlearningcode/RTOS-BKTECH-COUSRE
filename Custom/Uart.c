@@ -28,7 +28,7 @@ USART1->BRR|=(104<<4)|(3<<0);
 	USART1->CR1|=(1U<<13); // EN Usart
 }
 
-void Uart2_Transmiter(uint8_t *data, uint16_t size) {
+void Uart1_Transmiter(uint8_t *data, uint16_t size) {
     for (uint16_t i = 0; i < size; i++) {
      
         while (!((USART2->SR >> 7) & 0x1));
