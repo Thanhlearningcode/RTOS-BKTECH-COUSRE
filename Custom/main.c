@@ -46,6 +46,6 @@ Uart1_Init(115200);
     *temp = (uint32_t)readEncoder; // Rename Ngat Exti 9
 while(1){
 	sprintf((char *)txData, "%ld, %ld\n", pos_left, pos_right);
- Uart2_Transmiter(txData, strlen((char *)txData));
+ Uart1_Transmiter(txData, strlen((char *)txData));
 }
 }
